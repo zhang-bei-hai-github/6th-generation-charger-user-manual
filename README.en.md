@@ -16,17 +16,7 @@
 
 You can contact me via email: [overseas@luobinsen.net](mailto:overseas@luobinsen.net)
 
- 
 
-Generation6 chargers introduction
-
-This is a supplemental file which contains:
-
-1. How to use the charger for the first time
-
-2. Procedures for checking for start failures, faults and abnormal charging stops
-
- 
 
 ## How to use the charger for the first time
 
@@ -43,6 +33,17 @@ This is a supplemental file which contains:
 
 
 - If you want to connect the charger to the Central System, a public network cable or a SIM card or WIFI needs to be provided. The public network cable or SIM card needs to be installed on the back of the screen.
+
+  <table>
+      <tr>
+      	<th>ethernet port</th>
+          <th>SIM slot</th>
+      </tr>
+      <tr>
+      	<td></td>
+          <td></td>
+      </tr>
+  </table>
 
 - Close the cover on the back of the screen
 
@@ -91,287 +92,296 @@ Go to Network Parameters and change the following parameters
 
 ### there is voltage in battery
 
-l Charger checks to vehicle battery voltage in standby condition, possible vehicle DC contactor damaged
+- Charger checks to vehicle battery voltage in standby condition, possible vehicle DC contactor damaged
 
-l The CCM voltage is not accurate and the CCM AD voltage needs to be calibrated.
+- The CCM voltage is not accurate and the CCM AD voltage needs to be calibrated.
 
 <div>
     <img src="image/wps46.jpg" alt="img" style="zoom:100%;" />
 </div>
 
 
-### 1.2 insulation detection fault
+### insulation detection fault
 
-l Check the insulation of the DC output of the charger
+- Check the insulation of the DC output of the charger
 
-l Check the charging module
+- Check the charging module
 
-l The CCM voltage is not accurate and the CCM AD voltage needs to be calibrated.
+- The CCM voltage is not accurate and the CCM AD voltage needs to be calibrated.
 
 <div>
     <img src="image/wps47.jpg" alt="img" style="zoom:100%;" />
 </div>
 
 
-### 1.3 contactor not open
+### contactor not open
 
-l Check the DC contactor
-
- 
-
-### 1.4 1802 telegram  time out
-
-l Check and replace the SECC
-
-l Check and replace the CCM
+- Check the DC contactor
 
  
 
-### 1.5 1806 telegram  time out
+### 1802 telegram  time out
 
-l Check and replace the SECC
+- Check and replace the SECC
 
-l Check and replace the CCM
-
- 
-
-### 1.6 battery reverse connected
-
-l GBT charger not detecting vehicle battery voltage
+- Check and replace the CCM
 
  
 
-### 1.7 1811 telegram  time out
+### 1806 telegram  time out
 
-l Check and replace the SECC
+- Check and replace the SECC
 
-l Check and replace the CCM
-
- 
-
-### 1.8 1009
-
-l Check and replace the SECC
+- Check and replace the CCM
 
  
 
-### 1.9 handshake time out
+### battery reverse connected
 
-l Check and replace the SECC
+- GBT charger not detecting vehicle battery voltage
 
  
 
-### 1.10 BMS other message time out
+### 1811 telegram  time out
 
-l Check and replace the SECC
+- Check and replace the SECC
+
+- Check and replace the CCM
+
+ 
+
+### 1009
+
+- Check and replace the SECC
+
+ 
+
+### handshake time out
+
+- Check and replace the SECC
+
+ 
+
+### BMS other message time out
+
+- Check and replace the SECC
 
  
 
 ### BMS other message time out 1
 
-l Check and replace the SECC
+- Check and replace the SECC
 
  
 
 ### connector disconnect and terminated
 
-l Disable “JIS insulation fast test”,Enable “Insulation detection enable”
+- Disable “JIS insulation fast test”,Enable “Insulation detection enable”
 
 <div>
-    <img src="image/wps48.jpg" alt="img" style="zoom:100%;" />
+    <table style="width: 100%; table-layout: fixed; border-collapse: collapse;">
+        <tr>
+        	<td style="width: 70%; padding: 8px; text-align: left; border: 1px solid black;">
+            	<img src="image/wps48.jpg" alt="img" style="zoom:100%;" />
+            </td>
+            <td style="width: 30%; padding: 8px; text-align: left; border: 1px solid black;">
+            	<ul>
+                    <li>
+                    	The AD board is a quick check board, select enable.
+                    </li>
+                    <li>
+                    	AD board is not a fast detection board, select disable.
+                    </li>
+                    <li>
+                    	Whether the AD is a quick check AD to see whether there is a white relay inside the AD board, without removing the shell, from the bottom to the inside, you can see it
+                    </li>
+                </ul>
+            </td>
+        </tr>
+    </table>
 </div>
 
 
 
+### contactor not closed or short circuit fault
 
+- Check the DC contactor
 
-The AD board is a quick check board, select enable.
-
-AD board is not a fast detection board, select disable.
-
-Whether the AD is a quick check AD to see whether there is a white relay inside the AD board, without removing the shell, from the bottom to the inside, you can see it
+- The CCM voltage is not accurate and the CCM AD voltage needs to be calibrated.
 
  
 
-### 1.13 contactor not closed or short circuit fault
+### Abnormal detection voltage range
 
-l Check the DC contactor
-
-l The CCM voltage is not accurate and the CCM AD voltage needs to be calibrated.
+- The output voltage range of the charger（200-1000V） is not sufficient for the vehicle and the vehicle cannot be charged at this charger.
 
  
 
-### 1.14 Abnormal detection voltage range
+### old standard(GB/T & Local area) disabled charger not support
 
-l The output voltage range of the charger（200-1000V） is not sufficient for the vehicle and the vehicle cannot be charged at this charger.
-
- 
-
-### 1.15 old standard(GB/T & Local area) disabled charger not support
-
-l The charger's communication protocol does not meet the vehicle
+- The charger's communication protocol does not meet the vehicle
 
  
 
-1.16 SOC not reachable
+### SOC not reachable
 
-l The charger's communication protocol does not meet the vehicle
-
- 
-
-1.17 battery voltage higher than charger Max.output voltage
-
-l The output voltage range of the charger（200-1000V） is not sufficient for the vehicle and the vehicle cannot be charged at this charger.
+- The charger's communication protocol does not meet the vehicle
 
  
 
-1.18 Abnormal battery voltage - exceeding the current battery voltage range of BCP message
+### battery voltage higher than charger Max.output voltage
 
-l The output voltage range of the charger（200-1000V） is not sufficient for the vehicle and the vehicle cannot be charged at this charger.
-
- 
-
-1.19 control command stop
-
-l CMS has sent a stop command to the charger, check the CMS
+- The output voltage range of the charger（200-1000V） is not sufficient for the vehicle and the vehicle cannot be charged at this charger.
 
  
 
-1.20 Authentication failed
+### Abnormal battery voltage - exceeding the current battery voltage range of BCP message
 
-l User ID does not exist or is expired or frozen in CMS
-
- 
-
-1.21 BMS start on fault
-
-l Charger and vehicle communication error, try replacing the SECC
+- The output voltage range of the charger（200-1000V） is not sufficient for the vehicle and the vehicle cannot be charged at this charger.
 
  
 
-1.22 over voltage fault
+### control command stop
 
-l Check charger output voltage
-
-l The CCM voltage is not accurate and the CCM AD voltage needs to be calibrated.
+- CMS has sent a stop command to the charger, check the CMS
 
  
 
-1.23 insulation detection boost failed
+### Authentication failed
 
-l Check that the charging module is working properly
-
-l The CCM voltage is not accurate and the CCM AD voltage needs to be calibrated.
+- User ID does not exist or is expired or frozen in CMS
 
  
 
-1.24 The confirmation result of receiving the TCU message CMD12 from the State Grid is failed
+### BMS start on fault
 
-l Replacement of TCU
-
- 
-
-1.25 TCU normal stop
-
-l Replacement of TCU
+- Charger and vehicle communication error, try replacing the SECC
 
  
 
-1.26 TCU charge-control unit stop due to charging controler fault
+### over voltage fault
 
-l Replacement of TCU
+- Check charger output voltage
 
- 
-
-1.27 Communication failure between TCU charging control unit and charging controller
-
-l Check CCM power supply
-
-l Check and replace the network cable between the TCU and the CCM
-
-l Replacement of CCM
+- The CCM voltage is not accurate and the CCM AD voltage needs to be calibrated.
 
  
 
-1.28 TCU card reader communication fault
+### insulation detection boost failed
 
-l Check the card reader and its wiring harness
+- Check that the charging module is working properly
 
-l Replacement of card reader
-
- 
-
-1.29 Communication failure between TCU and Meter device
-
-l Check meter power supply
-
-l Replacement Meter
+- The CCM voltage is not accurate and the CCM AD voltage needs to be calibrated.
 
  
 
-1.30 TCUESAM fault
+### The confirmation result of receiving the TCU message CMD12 from the State Grid is failed
 
-l Replacement of TCU
-
- 
-
-1.31 TCU metering data verification is abnormal
-
-l Check and replace DC energy meters
+- Replacement of TCU
 
  
 
-1.32 TCU stop due to other faults
+### TCU normal stop
 
-l For unknown reasons, please contact the supplier to check
-
- 
-
-1.33 TCU communication abnormal
-
-l Check and replace TCU
+- Replacement of TCU
 
  
 
-1.34 Vehicle startup BRO message is abnormal
+### TCU charge-control unit stop due to charging controler fault
 
-l Check and replace the SECC
-
- 
-
-1.35 channel no charging TUTEL
-
-l TUTEL-specific protocols
+- Replacement of TCU
 
  
 
-1.36 connector charging stop
+### Communication failure between TCU charging control unit and charging controller
 
-l Check the connection between the charging gun and the vehicle or replace the charging gun
+- Check CCM power supply
 
- 
+- Check and replace the network cable between the TCU and the CCM
 
-1.37 Emergency stop fault
-
-l The emergency stop button has been pressed and there is no abnormality, please restore it.
+- Replacement of CCM
 
  
 
-1.38 door open fault
+### TCU card reader communication fault
 
-l The door is open. Please close it.
+- Check the card reader and its wiring harness
 
-l Check the door limit switches
+- Replacement of card reader
 
  
 
-1.39 DC Metering communication fault
+### Communication failure between TCU and Meter device
 
-l Checking the power supply to the DC energy meter
+- Check meter power supply
 
-l Check the communication harness of the DC energy meter
+- Replacement Meter
 
-l Check DC meter address
+ 
+
+### TCUESAM fault
+
+- Replacement of TCU
+
+ 
+
+### TCU metering data verification is abnormal
+
+- Check and replace DC energy meters
+
+ 
+
+### TCU stop due to other faults
+
+- For unknown reasons, please contact the supplier to check
+
+ 
+
+### TCU communication abnormal
+
+- Check and replace TCU
+
+ 
+
+### Vehicle startup BRO message is abnormal
+
+- Check and replace the SECC
+
+ 
+
+### channel no charging TUTEL
+
+- TUTEL-specific protocols
+
+ 
+
+### connector charging stop
+
+- Check the connection between the charging gun and the vehicle or replace the charging gun
+
+ 
+
+### Emergency stop fault
+
+- The emergency stop button has been pressed and there is no abnormality, please restore it.
+
+ 
+
+### door open fault
+
+- The door is open. Please close it.
+
+- Check the door limit switches
+
+ 
+
+### DC Metering communication fault
+
+- Checking the power supply to the DC energy meter
+
+- Check the communication harness of the DC energy meter
+
+- Check DC meter address
 
 <div>
     <img src="image/wps49.jpg" alt="img" style="zoom:100%;" />
@@ -381,17 +391,17 @@ l Check DC meter address
 
 
 
-l Replacement of DC Meter
+- Replacement of DC Meter
 
  
 
-1.40 communicate with CCM time out
+### communicate with CCM time out
 
-l Check CCM power supply
+- Check CCM power supply
 
-l Check and replace the network cable between the TCU and the CCM
+- Check and replace the network cable between the TCU and the CCM
 
-l Checking the parameters of the CCM
+- Checking the parameters of the CCM
 
 <table>
     <tr>
@@ -406,225 +416,225 @@ l Checking the parameters of the CCM
 
 
 
-l Replacement of CCM
+- Replacement of CCM
 
  
 
-1.41 No charging fault
+### No charging fault
 
-l Please contact the supplier to check
-
- 
-
-1.42 Fuse fault
-
-l Check fuses
+- Please contact the supplier to check
 
  
 
-1.43 Lightning arrester fault
+### Fuse fault
 
-l Check or replace SPD
-
- 
-
-1.44 Termial board abnormal
-
-l Check FZ power supply
-
-l Check FZ communication harness
-
-l Replacement of FZ
+- Check fuses
 
  
 
-1.45 AC/DC controler fault
+### Lightning arrester fault
 
-l Please contact the supplier to check
-
- 
-
-1.46 aircondition controler fault
-
-l Check the power supply to the air conditioning control board
-
-l Check the communication harness of the air conditioning control board
-
-l Replacement of air conditioning control board
+- Check or replace SPD
 
  
 
-1.47 AD unit communicate module fault
+### Termial board abnormal
 
-l Check that the AD address is correct
+- Check FZ power supply
 
-l Check the power supply to the AD
+- Check FZ communication harness
 
-l Check AD communication harness
-
-l Replacement of AD
+- Replacement of FZ
 
  
 
-1.48 all airconditioner fault
+### AC/DC controler fault
 
-l Check all air conditioning power
-
-l Check all air conditioning communication harnesses
-
-l Maybe all the air conditioners are broken.
+- Please contact the supplier to check
 
  
 
-1.49 Excessive wind speed
+### aircondition controler fault
 
-l The wind is too strong. Wait for the wind to die down.
+- Check the power supply to the air conditioning control board
 
-l The anemometer's broken.
+- Check the communication harness of the air conditioning control board
 
- 
-
-1.50 main breaker electrical operator fault
-
-l The main breaker is broken, it needs to be replaced.
+- Replacement of air conditioning control board
 
  
 
-1.51 SDV fault
+### AD unit communicate module fault
 
-l The SDV is broken, it needs to be replaced.
+- Check that the AD address is correct
 
- 
+- Check the power supply to the AD
 
-1.52 Metering device fault
+- Check AD communication harness
 
-l Replacement of DC energy meters
-
- 
-
-1.53 main breaker electrical operator no power supply operation fault
-
-l Check the power supply to the main circuit breaker
-
-l The main breaker is broken, it needs to be replaced.
+- Replacement of AD
 
  
 
-1.54 on maintenance
+### all airconditioner fault
 
-l The charger is in service mode, note the position of the service button
+- Check all air conditioning power
 
- 
+- Check all air conditioning communication harnesses
 
-1.55 FLASH fault
-
-l The flash board in the middle of the CCM is damaged and needs to be replaced.
+- Maybe all the air conditioners are broken.
 
  
 
-1.56 RAM fault
+### Excessive wind speed
 
-l The flash board in the middle of the CCM is damaged and needs to be replaced.
+- The wind is too strong. Wait for the wind to die down.
 
- 
-
-1.57 SECC_PLC communication fault
-
-l Check the power supply of the SECC
-
-l Checking the communication cable between SECC and CCM
-
-l Replacement SECC
+- The anemometer's broken.
 
  
 
-1.58 Parallel contactor fault or module terminal voltage abnormality
+### main breaker electrical operator fault
 
-l Check or replace the intermediate contactor
-
-l The CCM voltage is not accurate and the CCM AD voltage needs to be calibrated.
+- The main breaker is broken, it needs to be replaced.
 
  
 
-1.59 smoke sensor fault
+### SDV fault
 
-l Fire or smoke in the cabinet
-
-l The smoke detector is broken.
+- The SDV is broken, it needs to be replaced.
 
  
 
-1.60 eletrical locker fault
+### Metering device fault
 
-l GBT charging gun electronic lock abnormality
-
- 
-
-1.61 temperature of cabinet high fault
-
-l High temperature inside the cabinet, need to stop and cool the charger
-
-l The temperature sensor is broken
+- Replacement of DC energy meters
 
  
 
-1.62 channel specific remote control time out
+### main breaker electrical operator no power supply operation fault
 
-l Please contact the supplier to check
+- Check the power supply to the main circuit breaker
 
- 
-
-1.63 Real-time clock RTC fault
-
-l The TCU's battery needs to be installed
-
-l Time needs to be calibrated.
-
-l TCU is damaged, please replace the TCU
+- The main breaker is broken, it needs to be replaced.
 
  
 
-1.64 CCM enters start charging
+### on maintenance
 
-l Charger and vehicle communication is in progress, please wait
-
- 
-
-1.65 CCM enters charging time out
-
-l Communication failure between charger and vehicle
-
-l Check and replace the SECC
+- The charger is in service mode, note the position of the service button
 
  
 
-1.66 VIN Get failed
+### FLASH fault
 
-l Check AC power supply
-
-l Check the AC contactor
-
-l Check charging module
+- The flash board in the middle of the CCM is damaged and needs to be replaced.
 
  
 
-1.67 output short circuit
+### RAM fault
 
-l Charger output short circuit, please check whether the charger or vehicle is short-circuited
-
- 
-
-1.68 input phase missing
-
-l AC input phase sequence is wrong, please change the correct phase sequence
+- The flash board in the middle of the CCM is damaged and needs to be replaced.
 
  
 
-1.69 input over voltage
+### SECC_PLC communication fault
 
-l Input AC voltage higher than charger AC voltage range2
+- Check the power supply of the SECC
 
-l Checking the parameters of the CCM
+- Checking the communication cable between SECC and CCM
+
+- Replacement SECC
+
+ 
+
+### Parallel contactor fault or module terminal voltage abnormality
+
+- Check or replace the intermediate contactor
+
+- The CCM voltage is not accurate and the CCM AD voltage needs to be calibrated.
+
+ 
+
+### smoke sensor fault
+
+- Fire or smoke in the cabinet
+
+- The smoke detector is broken.
+
+ 
+
+### eletrical locker fault
+
+- GBT charging gun electronic lock abnormality
+
+ 
+
+### temperature of cabinet high fault
+
+- High temperature inside the cabinet, need to stop and cool the charger
+
+- The temperature sensor is broken
+
+ 
+
+### channel specific remote control time out
+
+- Please contact the supplier to check
+
+ 
+
+### Real-time clock RTC fault
+
+- The TCU's battery needs to be installed
+
+- Time needs to be calibrated.
+
+- TCU is damaged, please replace the TCU
+
+ 
+
+### CCM enters start charging
+
+- Charger and vehicle communication is in progress, please wait
+
+ 
+
+### CCM enters charging time out
+
+- Communication failure between charger and vehicle
+
+- Check and replace the SECC
+
+ 
+
+### VIN Get failed
+
+- Check AC power supply
+
+- Check the AC contactor
+
+- Check charging module
+
+ 
+
+### output short circuit
+
+- Charger output short circuit, please check whether the charger or vehicle is short-circuited
+
+ 
+
+### input phase missing
+
+- AC input phase sequence is wrong, please change the correct phase sequence
+
+ 
+
+### input over voltage
+
+- Input AC voltage higher than charger AC voltage range2
+
+- Checking the parameters of the CCM
 
 <div>
     <img src="image/wps52.jpg" alt="img" style="zoom:100%;" />
@@ -636,117 +646,117 @@ l Checking the parameters of the CCM
 
 
 
-1.70 input lower voltage
+### input lower voltage
 
-l Input AC voltage lower than charger AC voltage range
+- Input AC voltage lower than charger AC voltage range
 
-l Checking the parameters of the CCM
-
- 
-
-1.71 communication of insulation module fault
-
-l Please contact the supplier to check
+- Checking the parameters of the CCM
 
  
 
-1.72 input insulation fault
+### communication of insulation module fault
 
-l Please disconnect the power and check the input insulation
-
- 
-
-1.73 BMS communcation module fault
-
-l Please contact the supplier to check
+- Please contact the supplier to check
 
  
 
-1.74 Fire alarm
+### input insulation fault
 
-l Please check the fire extinguisher.
-
- 
-
-1.75 other unkown reason
-
-l Please contact the supplier to check
+- Please disconnect the power and check the input insulation
 
  
 
-1.76 Electronic lock feedback abnormality
+### BMS communcation module fault
 
-l Charging gun electronic lock abnormality, please replace the charging gun
-
- 
-
-1.77 DC contactor abnormality
-
-l Damaged DC contactor, replace DC contactor
+- Please contact the supplier to check
 
  
 
-1.78 DC pre charging fault
+### Fire alarm
 
-l Please check the charging module
-
-l Please check the AD voltage value of the CCM and calibrate it
+- Please check the fire extinguisher.
 
  
 
-1.79 Input insulation self-test abnormality
+### other unkown reason
 
-l The input insulation self-test board is abnormal, please replace it.
-
- 
-
-1.80 Abnormal output insulation self check
-
-l The output insulation self-test board is abnormal, please replace it.
+- Please contact the supplier to check
 
  
 
-1.81 Manual shutdown during startup
+### Electronic lock feedback abnormality
 
-l Stopped during startup
-
- 
-
-1.82 Card swiping shutdown during startup
-
-l Stopped by a swipe during startup
+- Charging gun electronic lock abnormality, please replace the charging gun
 
  
 
-1.83 Remote shutdown during startup
+### DC contactor abnormality
 
-l Remote stop during startup
-
- 
-
-1.84 Power loss
-
-l Input power suddenly cut off
+- Damaged DC contactor, replace DC contactor
 
  
 
-1.85 Ground detection function communication failure
+### DC pre charging fault
 
-l Check the power supply to the ground detector
+- Please check the charging module
 
-l Check the communication harness of the ground detector
-
- 
-
-1.86 Ground fault
-
-l Earth wire error, please check if the earth wire is firmly connected
+- Please check the AD voltage value of the CCM and calibrate it
 
  
 
-1.87 Phase loss alarm
+### Input insulation self-test abnormality
 
-l Check input for phase loss
+- The input insulation self-test board is abnormal, please replace it.
+
+ 
+
+### Abnormal output insulation self check
+
+- The output insulation self-test board is abnormal, please replace it.
+
+ 
+
+### Manual shutdown during startup
+
+- Stopped during startup
+
+ 
+
+### Card swiping shutdown during startup
+
+- Stopped by a swipe during startup
+
+ 
+
+### Remote shutdown during startup
+
+- Remote stop during startup
+
+ 
+
+### Power loss
+
+- Input power suddenly cut off
+
+ 
+
+### Ground detection function communication failure
+
+- Check the power supply to the ground detector
+
+- Check the communication harness of the ground detector
+
+ 
+
+### Ground fault
+
+- Earth wire error, please check if the earth wire is firmly connected
+
+ 
+
+### Phase loss alarm
+
+- Check input for phase loss
 
  
 
@@ -754,313 +764,313 @@ l Check input for phase loss
 
  
 
-2.1 Emergency stop fault
+### Emergency stop fault
 
-l The emergency stop button has been pressed and there is no abnormality, please restore it.
-
- 
-
-2.2 Parallel contactor fault or module terminal voltage abnormality
-
-l Check or replace the intermediate contactor
-
-l The CCM voltage is not accurate and the CCM AD voltage needs to be calibrated.
+- The emergency stop button has been pressed and there is no abnormality, please restore it.
 
  
 
-2.3 DC Metering communication fault
+### Parallel contactor fault or module terminal voltage abnormality
 
-l Checking the power supply to the DC energy meter
+- Check or replace the intermediate contactor
 
-l Check the communication harness of the DC energy meter
-
-l Check DC meter address
+- The CCM voltage is not accurate and the CCM AD voltage needs to be calibrated.
 
  
 
-2.4 communicate with CCM time out
+### DC Metering communication fault
 
-l Check CCM power supply
+- Checking the power supply to the DC energy meter
 
-l Check and replace the network cable between the TCU and the CCM
+- Check the communication harness of the DC energy meter
 
-l Checking the parameters of the CCM
-
- 
-
-2.5 temperature of cabinet high fault
-
-l High temperature inside the cabinet, need to stop and cool the charger
-
-l The temperature sensor is broken
+- Check DC meter address
 
  
 
-2.6 CCS2 communication module fault
+### communicate with CCM time out
 
-l Check the power supply of the SECC
+- Check CCM power supply
 
-l Checking the communication cable between SECC and CCM
+- Check and replace the network cable between the TCU and the CCM
 
-l Replacement SECC
-
- 
-
-2.7 door open fault
-
-l The door is open. Please close it.
-
-l Check the door limit switches
+- Checking the parameters of the CCM
 
  
 
-2.8 No charging fault
+### temperature of cabinet high fault
 
-l Please contact the supplier to check
+- High temperature inside the cabinet, need to stop and cool the charger
 
- 
-
-2.9 Fuse fault
-
-l Check fuse
+- The temperature sensor is broken
 
  
 
-2.10 Lightning arrester fault
+### CCS2 communication module fault
 
-l Check or replace SPD
+- Check the power supply of the SECC
 
- 
+- Checking the communication cable between SECC and CCM
 
-2.11 Termial board abnormal
-
-l Check FZ power supply
-
-l Check FZ communication harness
-
-l Replacement of FZ
+- Replacement SECC
 
  
 
-2.12 AC/DC controler fault
+### door open fault
 
-l Please contact the supplier to check
+- The door is open. Please close it.
 
- 
-
-2.13 aircondition controler fault
-
-l Check the power supply to the air conditioning control board
-
-l Check the communication harness of the air conditioning control board
-
-l Replacement of air conditioning control board
+- Check the door limit switches
 
  
 
-2.14 AD unit communicate module fault
+### No charging fault
 
-l Check that the AD address is correct
-
-l Check the power supply to the AD
-
-l Check AD communication harness
-
-l Replacement of AD
+- Please contact the supplier to check
 
  
 
-2.15 airconditioner fault
+### Fuse fault
 
-l Check the power supply to the air conditioner
-
-l Check air conditioning communication harness
-
-l Replacement of air conditioners
+- Check fuse
 
  
 
-2.16 Excessive wind speed
+### Lightning arrester fault
 
-l The wind is too strong. Wait for the wind to die down.
-
-l The anemometer's broken.
+- Check or replace SPD
 
  
 
-2.17 main breaker electrical operator fault
+### Termial board abnormal
 
-l The main breaker is broken, it needs to be replaced
+- Check FZ power supply
 
- 
+- Check FZ communication harness
 
-2.18 SDV fault
-
-l The SDV is broken, it needs to be replaced
+- Replacement of FZ
 
  
 
-2.19 Metering device fault
+### AC/DC controler fault
 
-l Replacement of DC energy meters
-
- 
-
-2.20 abnormal operation without power supply
-
-l Check that the AC contactor is closed
+- Please contact the supplier to check
 
  
 
-2.21 maintenance status
+### aircondition controler fault
 
-l The charger is in service mode, note the position of the service button
+- Check the power supply to the air conditioning control board
 
- 
+- Check the communication harness of the air conditioning control board
 
-2.22 smoke sensor fault
-
-l Fire or smoke in the cabinet
-
-l The smoke detector is broken.
+- Replacement of air conditioning control board
 
  
 
-2.23 eletrical locker fault
+### AD unit communicate module fault
 
-l GBT charging gun electronic lock abnormality,
+- Check that the AD address is correct
 
-l Replacement of charging gun
+- Check the power supply to the AD
 
- 
+- Check AD communication harness
 
-2.24 Real-time clock RTC fault
-
-l The TCU's battery needs to be installed
-
-l Time needs to be calibrated.
-
-l TCU is damaged, please replace the TCU
+- Replacement of AD
 
  
 
-2.25 CCM procedure fault
+### airconditioner fault
 
-l Replacement of SECC
+- Check the power supply to the air conditioner
 
- 
+- Check air conditioning communication harness
 
-2.26 output short circuit
-
-l Charger output short circuit, please check whether the charger or vehicle is short-circuited
+- Replacement of air conditioners
 
  
 
-2.27 input phase missing
+### Excessive wind speed
 
-l AC input phase sequence is wrong, please change the correct phase sequence
+- The wind is too strong. Wait for the wind to die down.
 
- 
-
-2.28 input over voltage
-
-l Input AC voltage higher than charger AC voltage range2
-
-l Checking the parameters of the CCM
+- The anemometer's broken.
 
  
 
-2.29 input lower voltage
+### main breaker electrical operator fault
 
-l Input AC voltage lower than charger AC voltage range
-
-l Checking the parameters of the CCM
+- The main breaker is broken, it needs to be replaced
 
  
 
-2.30 communication of insulation module fault
+### SDV fault
 
-l Please contact the supplier to check
-
- 
-
-2.31 input insulation fault
-
-l Please disconnect the power and check the input insulation
+- The SDV is broken, it needs to be replaced
 
  
 
-2.32 BMS communcation module fault
+### Metering device fault
 
-l Please contact the supplier to check
-
- 
-
-2.33 FLASH fault
-
-l The flash board in the middle of the CCM is damaged and needs to be replaced.
+- Replacement of DC energy meters
 
  
 
-2.34 RAM fault
+### abnormal operation without power supply
 
-l The flash board in the middle of the CCM is damaged and needs to be replaced.
-
- 
-
-2.35 Fire alarm
-
-l Please check the fire extinguisher.
+- Check that the AC contactor is closed
 
  
 
-2.36 other unkown reason
+### maintenance status
 
-l Please contact the supplier to check
-
- 
-
-2.37 Output contactor failure
-
-l Check or replace the DC contactor
+- The charger is in service mode, note the position of the service button
 
  
 
-2.38 Input insulation self check fault
+### smoke sensor fault
 
-l The input insulation self-test board is abnormal, please replace it.
+- Fire or smoke in the cabinet
 
- 
-
-2.39 Output insulation self check fault
-
-l The output insulation self-test board is abnormal, please replace it.
+- The smoke detector is broken.
 
  
 
-2.40 Power loss
+### eletrical locker fault
 
-l Input power suddenly cut off
+- GBT charging gun electronic lock abnormality,
 
- 
-
-2.41 Ground detection function communication failure
-
-l Check the power supply to the ground detector
-
-l Check the communication harness of the ground detector
+- Replacement of charging gun
 
  
 
-2.42 Ground fault
+### Real-time clock RTC fault
 
-l Earth wire error, please check if the earth wire is firmly connected
+- The TCU's battery needs to be installed
+
+- Time needs to be calibrated.
+
+- TCU is damaged, please replace the TCU
 
  
 
-2.43 Phase loss alarm
+### CCM procedure fault
 
-l Check input for phase loss
+- Replacement of SECC
+
+ 
+
+### output short circuit
+
+- Charger output short circuit, please check whether the charger or vehicle is short-circuited
+
+ 
+
+### input phase missing
+
+- AC input phase sequence is wrong, please change the correct phase sequence
+
+ 
+
+### input over voltage
+
+- Input AC voltage higher than charger AC voltage range2
+
+- Checking the parameters of the CCM
+
+ 
+
+### input lower voltage
+
+- Input AC voltage lower than charger AC voltage range
+
+- Checking the parameters of the CCM
+
+ 
+
+### communication of insulation module fault
+
+- Please contact the supplier to check
+
+ 
+
+### input insulation fault
+
+- Please disconnect the power and check the input insulation
+
+ 
+
+### BMS communcation module fault
+
+- Please contact the supplier to check
+
+ 
+
+### FLASH fault
+
+- The flash board in the middle of the CCM is damaged and needs to be replaced.
+
+ 
+
+### RAM fault
+
+- The flash board in the middle of the CCM is damaged and needs to be replaced.
+
+ 
+
+### Fire alarm
+
+- Please check the fire extinguisher.
+
+ 
+
+### other unkown reason
+
+- Please contact the supplier to check
+
+ 
+
+### Output contactor failure
+
+- Check or replace the DC contactor
+
+ 
+
+### Input insulation self check fault
+
+- The input insulation self-test board is abnormal, please replace it.
+
+ 
+
+### Output insulation self check fault
+
+- The output insulation self-test board is abnormal, please replace it.
+
+ 
+
+### Power loss
+
+- Input power suddenly cut off
+
+ 
+
+### Ground detection function communication failure
+
+- Check the power supply to the ground detector
+
+- Check the communication harness of the ground detector
+
+ 
+
+### Ground fault
+
+- Earth wire error, please check if the earth wire is firmly connected
+
+ 
+
+### Phase loss alarm
+
+- Check input for phase loss
 
  
 
@@ -1070,727 +1080,726 @@ l Check input for phase loss
 
 ## Analysis and handling of abnormal stop of transactions
 
-3.1 BMS time out
+### BMS time out
 
-l Check and replace the SECC
+- Check and replace the SECC
 
-l Check and replace the CCM
+- Check and replace the CCM
 
  
 
-3.2 Timeout or unknown reason process error
+### Timeout or unknown reason process error
 
-l Check and replace the SECC
+- Check and replace the SECC
 
-l Check and replace the CCM
+- Check and replace the CCM
 
  
 
-3.3 BMS insulation fault
+### BMS insulation fault
 
-l Check the insulation of the DC output of the charger
+- Check the insulation of the DC output of the charger
 
-l Check the charging module
+- Check the charging module
 
  
 
-3.4 BMS output connector overtemperature
+### BMS output connector overtemperature
 
-l Check charging gun temperature and replace charging gun
+- Check charging gun temperature and replace charging gun
 
-l Check if the vehicle's sockets are damaged, or that the sockets need to be replaced.
+- Check if the vehicle's sockets are damaged, or that the sockets need to be replaced.
 
  
 
-3.5 BMS element output connector overtemperature
+### BMS element output connector overtemperature
 
-l Check charging gun temperature and replace charging gun
+- Check charging gun temperature and replace charging gun
 
-l Check if the vehicle's sockets are damaged, or that the sockets need to be replaced.
+- Check if the vehicle's sockets are damaged, or that the sockets need to be replaced.
 
  
 
-3.6 BMS connector fault
+### BMS connector fault
 
-l Check and replace charging gun
+- Check and replace charging gun
 
-l Check if the vehicle's sockets are damaged, or that the sockets need to be replaced.
+- Check if the vehicle's sockets are damaged, or that the sockets need to be replaced.
 
  
 
-3.7 BMS battery group temperater high
+### BMS battery group temperater high
 
-l Vehicle battery performance issues
+- Vehicle battery performance issues
 
  
 
-3.8 BMS other faults
+### BMS other faults
 
-l Please contact the supplier to check
+- Please contact the supplier to check
 
  
 
-3.9 BMS over current
+### BMS over current
 
-l Check charger output current
+- Check charger output current
 
  
 
-3.10 BMS voltage abnormal
+### BMS voltage abnormal
 
-l Check charger output voltage
+- Check charger output voltage
 
  
 
-3.11 BMS high voltage relay fault
+### BMS high voltage relay fault
 
-l Damaged vehicle DC contactor
+- Damaged vehicle DC contactor
 
  
 
-3.12 BMS detection point fault
+### BMS detection point fault
 
-l Check that the charging gun is securely connected
+- Check that the charging gun is securely connected
 
  
 
-3.13 BMS reach request SOC
+### BMS reach request SOC
 
-l Normal stop or vehicle SOC issues
+- Normal stop or vehicle SOC issues
 
  
 
-3.14 BMS reach total voltage setting value output over voltagve warning
+### BMS reach total voltage setting value output over voltagve warning
 
-l Check the AD voltage value of the CCM and calibrate it
+- Check the AD voltage value of the CCM and calibrate it
 
  
 
-3.15 BMS reach unit voltage setting value
+### BMS reach unit voltage setting value
 
-l Normal stops or battery performance problems
+- Normal stops or battery performance problems
 
  
 
-3.16 BMS secondary alarm unit power battery voltage is too high
+### BMS secondary alarm unit power battery voltage is too high
 
-l Normal stops or battery performance problems
+- Normal stops or battery performance problems
 
  
 
-3.17 BMS secondary alarm unit power battery voltage is too low
+### BMS secondary alarm unit power battery voltage is too low
 
-l Normal stops or battery performance problems
+- Normal stops or battery performance problems
 
  
 
-3.18 BMS SOC too high
+### BMS SOC too high
 
-l Normal stops or battery performance problems
+- Normal stops or battery performance problems
 
  
 
-3.19 BMS SOC too low
+### BMS SOC too low
 
-l Battery performance problems
+- Battery performance problems
 
  
 
-3.20 BMS charing over current
+### BMS charing over current
 
-l Check charger output current
+- Check charger output current
 
  
 
-3.21 BMS battery temperature too high
+### BMS battery temperature too high
 
-l Battery performance problems
+- Battery performance problems
 
-l 
+- 
 
-3.22 BMS battery insulation abnormal
+### BMS battery insulation abnormal
 
-l Check charger or vehicle insulation
+- Check charger or vehicle insulation
 
  
 
-3.23 BMS connection status abnormal
+### BMS connection status abnormal
 
-l Check that the charging gun is securely connected to the vehicle
+- Check that the charging gun is securely connected to the vehicle
 
-l Replace the charging gun or vehicle socket
+- Replace the charging gun or vehicle socket
 
  
 
-3.24 BMS no charging or control point current too low for 10 minutes
+### BMS no charging or control point current too low for 10 minutes
 
-l Low or no output current
+- Low or no output current
 
-l Check the DC contactor
+- Check the DC contactor
 
-l Check fuses
+- Check fuses
 
-l Check AC power supply
+- Check AC power supply
 
-l Check AC contactor
+- Check AC contactor
 
-l Check charging module
+- Check charging module
 
-l Check DC energy meter
+- Check DC energy meter
 
  
 
-3.25 manually stop
+### manually stop
 
-l The stop button on the screen is pressed
+- The stop button on the screen is pressed
 
  
 
-3.26 stop after reach request
+### stop after reach request
 
-l Full or battery performance issues
+- Full or battery performance issues
 
  
 
-3.27 stop of insufficient account
+### stop of insufficient account
 
-l Insufficient user balance, need to top up from CMS
+- Insufficient user balance, need to top up from CMS
 
  
 
-3.28 request voltage over Max.voltage
+### request voltage over Max.voltage
 
-l The output voltage range of the charger（200-1000V） is not sufficient for the vehicle and the vehicle cannot be charged at this charger.
+- The output voltage range of the charger（200-1000V） is not sufficient for the vehicle and the vehicle cannot be charged at this charger.
 
  
 
-3.29 request voltage lower than Min.voltage
+### request voltage lower than Min.voltage
 
-l The output voltage range of the charger（200-1000V） is not sufficient for the vehicle and the vehicle cannot be charged at this charger.
+- The output voltage range of the charger（200-1000V） is not sufficient for the vehicle and the vehicle cannot be charged at this charger.
 
  
 
-3.30 single battery unit over temperature
+### single battery unit over temperature
 
-l Vehicle battery performance issues
+- Vehicle battery performance issues
 
  
 
-3.31 battery temperature too high
+### battery temperature too high
 
-l Vehicle battery performance issues
+- Vehicle battery performance issues
 
  
 
-3.32 remote stop
+### remote stop
 
-l CMS controlled charging stop
+- CMS controlled charging stop
 
  
 
-3.33 no charging current exceeds the allowed time
+### no charging current exceeds the allowed time
 
-l Low or no output current
+- Low or no output current
 
-l Check the DC contactor
+- Check the DC contactor
 
-l Check fuses
+- Check fuses
 
-l Check AC power supply
+- Check AC power supply
 
-l Check AC contactor
+- Check AC contactor
 
-l Check charging module
+- Check charging module
 
-l Check DC energy meter
+- Check DC energy meter
 
  
 
-3.34 swipe card to stop charging
+### swipe card to stop charging
 
-l The card has been swiped to stop
+- The card has been swiped to stop
 
  
 
-3.35 connector pull out to stop charging
+### connector pull out to stop charging
 
-l Connector disconnection stops during charging
+- Connector disconnection stops during charging
 
-l Check or replace the charging gun
+- Check or replace the charging gun
 
  
 
-3.36 connector temperature too high
+### connector temperature too high
 
-l Check or replace the charging gun
+- Check or replace the charging gun
 
-l Check the charging gun temperature from the parameter
+- Check the charging gun temperature from the parameter
 
  
 
-3.37 disconnect  connector
+### disconnect  connector
 
-l Connector disconnection stops during charging
+- Connector disconnection stops during charging
 
-l Check or replace the charging gun
+- Check or replace the charging gun
 
  
 
-3.38 stop of charger detect insulation failure
+### stop of charger detect insulation failure
 
-l Check the insulation of the DC output of the charger
+- Check the insulation of the DC output of the charger
 
-l Check the charging module
+- Check the charging module
 
- 
 
-3.39 the confirmation result of receiving the State Grid TCU message CMD12 is Failed.
+### the confirmation result of receiving the State Grid TCU message CMD12 is Failed.
 
-l Replacement of TCU
+- Replacement of TCU
 
  
 
-3.40 TCU normal stop
+### TCU normal stop
 
-l Replacement of TCU
+- Replacement of TCU
 
  
 
-3.41 TCU charge-control unit stop due to charging controler fault
+### TCU charge-control unit stop due to charging controler fault
 
-l Replacement of TCU
+- Replacement of TCU
 
  
 
-3.42 Communication failure between TCU charging control unit and charging controller
+### Communication failure between TCU charging control unit and charging controller
 
-l Check CCM power supply
+- Check CCM power supply
 
-l Check and replace the network cable between the TCU and the CCM
+- Check and replace the network cable between the TCU and the CCM
 
-l Replacement of CCM
+- Replacement of CCM
 
  
 
-3.43 Communication failure between TCU and Meter device
+### Communication failure between TCU and Meter device
 
-l Check meter power supply
+- Check meter power supply
 
-l Replacement Meter
+- Replacement Meter
 
  
 
-3.44 TCUESAM fault
+### TCUESAM fault
 
-l Replacement of TCU
+- Replacement of TCU
 
  
 
-3.45 TCU metering data verification is abnormal
+### TCU metering data verification is abnormal
 
-l Check and replace DC energy meters
+- Check and replace DC energy meters
 
  
 
-3.46 stop of TCU other faults
+### stop of TCU other faults
 
-l Please contact the supplier to check
+- Please contact the supplier to check
 
  
 
-3.47 stop of TCU communication faults
+### stop of TCU communication faults
 
-l Please contact the supplier to check
+- Please contact the supplier to check
 
  
 
-3.48 Max.current exceed fault
+### Max.current exceed fault
 
-l Check and replace TCU
+- Check and replace TCU
 
  
 
-3.49 channel stop charging
+### channel stop charging
 
-l Please contact the supplier to check
+- Please contact the supplier to check
 
  
 
-3.50 stop charging due to charging current lower than 0.5A for 5 minutes
+### stop charging due to charging current lower than 0.5A for 5 minutes
 
-l Low or no output current
+- Low or no output current
 
-l Check the DC contactor
+- Check the DC contactor
 
-l Check fuses
+- Check fuses
 
-l Check AC power supply
+- Check AC power supply
 
-l Check AC contactor
+- Check AC contactor
 
-l Check charging module
+- Check charging module
 
-l Check DC energy meter
+- Check DC energy meter
 
  
 
-3.51 slave stop
+### slave stop
 
-l Failure of the second connector to start when charging a vehicle with two guns
+- Failure of the second connector to start when charging a vehicle with two guns
 
  
 
-3.52 Emergency stop fault
+### Emergency stop fault
 
-l The emergency stop button has been pressed and there is no abnormality, please restore it.
+- The emergency stop button has been pressed and there is no abnormality, please restore it.
 
  
 
-3.53 door open fault
+### door open fault
 
-l The door is open. Please close it.
+- The door is open. Please close it.
 
-l Check the door limit switches
+- Check the door limit switches
 
  
 
-3.54 DC Metering communication fault
+### DC Metering communication fault
 
-l Checking the power supply to the DC energy meter
+- Checking the power supply to the DC energy meter
 
-l Check the communication harness of the DC energy meter
+- Check the communication harness of the DC energy meter
 
-l Check DC meter address
+- Check DC meter address
 
  
 
-3.55 communicate with CCM time out
+### communicate with CCM time out
 
-l Check CCM power supply
+- Check CCM power supply
 
-l Check and replace the network cable between the TCU and the CCM
+- Check and replace the network cable between the TCU and the CCM
 
-l Checking the parameters of the CCM
+- Checking the parameters of the CCM
 
  
 
-3.56 No charging fault
+### No charging fault
 
-l Please contact the supplier to check
+- Please contact the supplier to check
 
  
 
-3.57 Fuse fault
+### Fuse fault
 
-l Check fuses
+- Check fuses
 
  
 
-3.58 Lightning arrester fault
+### Lightning arrester fault
 
-l Check or replace SPD
+- Check or replace SPD
 
  
 
-3.59 Termial board abnormal
+### Termia- board abnormal
 
-l Check FZ power supply
+- Check FZ power supply
 
-l Check FZ communication harness
+- Check FZ communication harness
 
-l Replacement of FZ
+- Replacement of FZ
 
  
 
-3.60 AC/DC controler fault
+### AC/DC controler fault
 
-l Please contact the supplier to check
+- Please contact the supplier to check
 
  
 
-3.61 aircondition controler fault
+### aircondition controler fault
 
-l Check the power supply to the air conditioning control board
+- Check the power supply to the air conditioning control board
 
-l Check the communication harness of the air conditioning control board
+- Check the communication harness of the air conditioning control board
 
-l Replacement of air conditioning control board
+- Replacement of air conditioning control board
 
  
 
-3.62 AD unit communicate module fault
+### AD unit communicate module fault
 
-l Check that the AD address is correct
+- Check that the AD address is correct
 
-l Check the power supply to the AD
+- Check the power supply to the AD
 
-l Check AD communication harness
+- Check AD communication harness
 
  
 
-3.63 airconditioner fault
+### airconditioner fault
 
-l Check the power supply to the air conditioning control board
+- Check the power supply to the air conditioning control board
 
-l Check the communication harness of the air conditioning control board
+- Check the communication harness of the air conditioning control board
 
-l Replacement of air conditioning control board
+- Replacement of air conditioning control board
 
  
 
-3.64 Excessive wind speed
+### Excessive wind speed
 
-l The wind is too strong. Wait for the wind to die down.
+- The wind is too strong. Wait for the wind to die down.
 
-l The anemometer's broken.
+- The anemometer's broken.
 
  
 
-3.65 main breaker electrical operator fault
+### main breaker electrical operator fault
 
-l The main breaker is broken, it needs to be replaced.
+- The main breaker is broken, it needs to be replaced.
 
  
 
-3.66 SDV fault
+### SDV fault
 
-l The SDV is broken, it needs to be replaced.
+- The SDV is broken, it needs to be replaced.
 
  
 
-3.67 Metering device fault
+### Metering device fault
 
-l Replacement of DC energy meters
+- Replacement of DC energy meters
 
  
 
-3.68 main breaker electrical operator no power supply operation fault
+### main breaker electrical operator no power supply operation fault
 
-l Check the power supply to the main circuit breaker
+- Check the power supply to the main circuit breaker
 
-l The main breaker is broken, it needs to be replaced.
+- The main breaker is broken, it needs to be replaced.
 
  
 
-3.69 on maintenance
+### on maintenance
 
-l The charger is in service mode, note the position of the service button
+- The charger is in service mode, note the position of the service button
 
  
 
-3.70 smoke sensor fault
+### smoke sensor fault
 
-l Fire or smoke in the cabinet
+- Fire or smoke in the cabinet
 
  
 
-3.71 eletrical locker fault
+### eletrical locker fault
 
-l GBT charging gun electronic lock abnormality
+- GBT charging gun electronic lock abnormality
 
  
 
-3.72 SECC_PLC abnormal communication
+### SECC_PLC abnormal communication
 
-l Check the power supply of the SECC
+- Check the power supply of the SECC
 
-l Checking the communication cable between SECC and CCM
+- Checking the communication cable between SECC and CCM
 
-l Replacement SECC
+- Replacement SECC
 
  
 
-3.73 temperature of cabinet high fault
+### temperature of cabinet high fault
 
-l High temperature inside the cabinet, need to stop and cool the charger
+- High temperature inside the cabinet, need to stop and cool the charger
 
-l The temperature sensor is broken
+- The temperature sensor is broken
 
  
 
-3.74 channel specific remote control time out
+### channel specific remote control time out
 
-l Please contact the supplier to check
+- Please contact the supplier to check
 
  
 
-3.75 Real-time clock RTC fault
+### Real-time clock RTC fault
 
-l The TCU's battery needs to be installed
+- The TCU's battery needs to be installed
 
-l Time needs to be calibrated.
+- Time needs to be calibrated.
 
-l TCU is damaged, please replace the TCU
+- TCU is damaged, please replace the TCU
 
  
 
-3.76 Active time reached
+### Active time reached
 
-l Stop at set time
+- Stop at set time
 
  
 
-3.77 Authentication exception (application serial number USID exception)
+### Authentication exception (application serial number USID exception)
 
-l Please contact the supplier to check
+- Please contact the supplier to check
 
  
 
-3.78 Abnormal stop of metering The starting power is bigger than the ending power
+### Abnormal stop of metering The starting power is bigger than the ending power
 
-l Please contact the supplier to check
+- Please contact the supplier to check
 
  
 
-3.79 Max.charging time reached 12 hours
+### Max.charging time reached 12 hours
 
-l Charging duration over 12 hours stops
+- Charging duration over 12 hours stops
 
  
 
-3.80 time record-start time fault
+### time record-start time fault
 
-l Transaction start time error
+- Transaction start time error
 
  
 
-3.81 hard reset finish
+### hard reset finish
 
-l CMS sends a hard reset
+- CMS sends a hard reset
 
  
 
-3.82 soft reset finish
+### soft reset finish
 
-l CMS sends a soft reset
+- CMS sends a soft reset
 
  
 
-3.83 stop charging due to internet fault
+### stop charging due to internet fault
 
-l Please contact the supplier to check
+- Please contact the supplier to check
 
  
 
-3.84 stop charging due to Metering fault
+### stop charging due to Metering fault
 
-l Check and replace DC energy meters
+- Check and replace DC energy meters
 
  
 
-3.85 output short circuit
+### output short circuit
 
-l Charger output short circuit, please check whether the charger or vehicle is short-circuited
+- Charger output short circuit, please check whether the charger or vehicle is short-circuited
 
  
 
-3.86 input AC phase missing
+### input AC phase missing
 
-l AC input phase sequence is wrong, please change the correct phase sequence
+- AC input phase sequence is wrong, please change the correct phase sequence
 
  
 
-3.87 input AC over voltage
+### input AC over voltage
 
-l Input AC voltage higher than charger AC voltage range2
+- Input AC voltage higher than charger AC voltage range2
 
  
 
-3.88 input AC low voltage
+### input AC low voltage
 
-l Input AC voltage lower than charger AC voltage range
+- Input AC voltage lower than charger AC voltage range
 
  
 
-3.89 communication of insulation module fault
+### communication of insulation module fault
 
-l Please contact the supplier to check
+- Please contact the supplier to check
 
  
 
-3.90 input insulation fault
+### input insulation fault
 
-l Please disconnect the power and check the input insulation
+- Please disconnect the power and check the input insulation
 
  
 
-3.91 BMS communcation module fault
+### BMS communcation module fault
 
-l Please contact the supplier to check
+- Please contact the supplier to check
 
  
 
-3.92 Power down
+### Power down
 
-l Input power suddenly cut off
+- Input power suddenly cut off
 
  
 
-3.93 Fire alarm
+### Fire alarm
 
-l Please check the fire extinguisher.
+- Please check the fire extinguisher.
 
  
 
-3.94 BMS termination
+### BMS termination
 
-l Normal stops or battery performance problems
+- Normal stops or battery performance problems
 
  
 
-3.95 stop for unknown reason
+### stop for unknown reason
 
-l Please contact the supplier to check
+- Please contact the supplier to check
 
  
 
-3.96 DC contactor abnormality
+### DC contactor abnormality
 
-l Damaged DC contactor, replace DC contactor
+- Damaged DC contactor, replace DC contactor
 
  
 
-3.97 Abnormal parallel contactor
+### Abnormal parallel contactor
 
-l Check or replace the intermediate contactor
+- Check or replace the intermediate contactor
 
  
 
-3.98 Abnormal output current exceeding control current
+### Abnormal output current exceeding control current
 
-l Check output current
+- Check output current
 
  
 
-3.99 Input insulation self check fault shutdown
+### Input insulation self check fault shutdown
 
-l The input insulation self-test board is abnormal, please replace it
+- The input insulation self-test board is abnormal, please replace it
 
  
 
-3.100 Output insulation self check fault shutdown
+### Output insulation self check fault shutdown
 
-l The output insulation self-test board is abnormal, please replace it.
+- The output insulation self-test board is abnormal, please replace it.
 
  
 
-3.101 Ground detection function communication failure
+### Ground detection function communication failure
 
-l Check the power supply to the ground detector
+- Check the power supply to the ground detector
 
-l Check the communication harness of the ground detector
+- Check the communication harness of the ground detector
 
  
 
-3.102 Ground fault
+### Ground fault
 
-l Earth wire error, please check if the earth wire is firmly connected
+- Earth wire error, please check if the earth wire is firmly connected
 
  
 
-3.103 Phase loss alarm
+### Phase loss alarm
 
-l Check input for phase loss
+- Check input for phase loss
 
 
 
