@@ -6,9 +6,8 @@
 </h1>
 
 <p align="center">
-<a href="./README_en.md">English</a> | <a href="./README_zh.md">简体中文</a> | <a href="https://gitee.com/jiang-haiyang666/6th-generation-charger-user-manual">在线文档</a> | <a href="https://github.com/zhang-bei-hai-github/6th-generation-charger-user-manual/tree/master">Online documentation</a>
+<a href="./README_en.md">English</a> | <a href="./README_zh.md">简体中文</a> | <a href="https://gitee.com/jiang-haiyang666/6th-generation-charger-user-manual">在线文档</a> | <a href="https://github.com/zhang-bei-hai-github/6th-generation-charger-user-manual/blob/master/README_en.md">Online documentation</a>
 </p>
-
 ---
 
 
