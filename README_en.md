@@ -1,4 +1,16 @@
-# Luobinsen 6th Generation Charger User Manual
+<p align="center">
+  <img width="40%" align="center" src="./logo/logo.png" alt="logo">
+</p>
+  <h1 align="center">
+  6th-generation-charger-user-manual
+</h1>
+
+<p align="center">
+<a href="./README_en.md">English</a> | <a href="./README_zh.md">简体中文</a>
+</p>
+---
+
+
 
  <div>
      <img src="image/wps1.jpg" alt="img" style="zoom:80%;" />
