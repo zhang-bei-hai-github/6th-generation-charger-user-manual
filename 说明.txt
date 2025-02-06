@@ -1,0 +1,12 @@
+一, 国内访问的在线文档地址
+https://gitee.com/jiang-haiyang666/6th-generation-charger-user-manual/blob/master/README_zh.md
+
+
+二, 如果国外访问不了国内的地址, 就访问github的地址: 
+https://github.com/zhang-bei-hai-github/6th-generation-charger-user-manual/blob/master/README_en.md
+
+三, 文档首页可以选择中英文切换
+1. English为当前环境下的英文文档(当前环境表示打开的是国内地址还是国外地址)
+2. 简体中文为当前环境下的中文文档
+3. 在线文档为国内的访问地址, 默认访问中文文档
+4. Online documentation为国外访问的地址, 默认访问英文文档
